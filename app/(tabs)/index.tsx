@@ -9,9 +9,8 @@ import {
   RefreshControl 
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import JokeCard from "@/components/JokeCategoryCard"; // Import the JokeCard component
+import JokeCard from "@/components/JokeCategoryCard"; 
 
-// Define interface for joke categories
 interface JokeCategory {
   id: number;
   name: string;
@@ -19,7 +18,6 @@ interface JokeCategory {
   jokeLimit: number;
 }
 
-// API Endpoints
 const API_CATEGORIES = "https://v2.jokeapi.dev/categories";
 
 export default function App() {
@@ -31,7 +29,6 @@ export default function App() {
     fetchCategories();
   }, []);
 
-  // Fetch joke categories
   const fetchCategories = async (): Promise<void> => {
     setRefreshing(true);
     try {
@@ -54,7 +51,6 @@ export default function App() {
     }
   };
 
-  // Fetch jokes for a specific category
   const fetchJokes = async (category: string, amount: number): Promise<string[]> => {
     try {
       const response = await fetch(`https://v2.jokeapi.dev/joke/${category}?type=single&amount=${amount}`);
@@ -66,7 +62,6 @@ export default function App() {
     }
   };
 
-  // Add more jokes to a category
   const addMoreJokes = async (category: string, index: number): Promise<void> => {
     if (data[index].jokeLimit >= 6) return;
     
@@ -79,7 +74,6 @@ export default function App() {
     });
   };
 
-  // Move selected category to top
   const moveToTop = (index: number): void => {
     setData((prevData) => {
       const updatedData = [...prevData];
@@ -89,7 +83,6 @@ export default function App() {
     });
   };
 
-  // Toggle collapse state
   const toggleCollapse = (id: number): void => {
     setCollapsedState((prevState) => ({ ...prevState, [id]: !prevState[id] }));
   };
