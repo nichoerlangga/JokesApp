@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# 🤣 Joke Explorer – React Native App  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Joke Explorer is a **React Native** mobile application that allows users to browse jokes from different categories, view them in collapsible sections, and dynamically load more jokes. The app integrates with **JokeAPI** to fetch jokes and features an interactive UI with animations.
 
-## Get started
+## 🚀 Features  
 
-1. Install dependencies
+- ✅ Fetches joke categories dynamically from **JokeAPI**  
+- ✅ Displays jokes in collapsible sections  
+- ✅ Allows users to load more jokes (up to a limit)  
+- ✅ Move categories to the top for quick access  
+- ✅ Smooth animations using **react-native-reanimated**  
+- ✅ Refresh categories with a simple pull-down  
+
+## 🛠️ Technologies Used  
+
+- **React Native** with TypeScript  
+- **Expo** for easy development  
+- **React Native Reanimated** for smooth animations  
+- **Collapsible Views** for better user experience  
+- **LinearGradient** for stylish background effects  
+
+## 📦 Installation  
+
+1. Clone the repository:  
 
    ```bash
-   npm install
+   git clone https://github.com/yourusername/joke-explorer.git
+   cd joke-explorer
    ```
-
-2. Start the app
-
+2. Install dependencies:
+   
    ```bash
-    npx expo start
+   npm install react-native-reanimated
+   npm install react-native-collapsible
+   npx expo install expo-linear-gradient  
    ```
+3. Start the Expo development server:
+   ```bash
+   npx expo start 
+   ```
+   
 
-In the output, you'll find options to open the app in a
+4. Scan the QR code in Expo Go (for Android/iOS) or run on an emulator.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📸 Screenshots
+![Screenshot 2025-03-05 220057](https://github.com/user-attachments/assets/a346d51e-1391-4217-a5f4-2780a9d25950)
+![Screenshot 2025-03-05 220109](https://github.com/user-attachments/assets/7fa53189-891e-4a5b-b76f-004a5b399126)
+![Screenshot 2025-03-05 220121](https://github.com/user-attachments/assets/f2d07511-4168-4ce9-8ec4-23eb38049ec7)
+![Screenshot 2025-03-05 220136](https://github.com/user-attachments/assets/d852c2ee-89d9-4d04-b3d3-f88a14806c15)
 
-## Get a fresh project
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
